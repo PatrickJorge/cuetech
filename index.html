@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-icons/dist/umd/lucide-icons.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i data-lucide="code-2" class="logo-icon"></i>
+                    <span>Patrick Jorge</span>
+                </div>
+
+                <nav class="nav-desktop">
+                    <a href="#home">Home</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#contact">Contato</a>
+                </nav>
+
+                <button class="cta-button desktop-only">Fale Comigo !</button>
+
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#projects">Projetos</a>
+                <a href="#contact">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span>Desenvolvedor FullStack</span>
+                    <span class="highlight">Construindo experiências digitais</span>
+                </h1>
+                <p>
+                    Transformando ideias em aplicativos elegantes, funcionais e amigáveis. Especializada em criar
+                    experiências web modernas que fazem a diferença.
+                </p>
+                <div class="cta-container">
+                    <a href="#projects" class="primary-button">
+                        Ver Projetos
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/PatrickJorge" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/patrick-corr%C3%AAa/" aria-label="LinkedIn"><i
+                            data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Sobre</h2>
+                    <p>
+                        Olá,sou Patrick Jorge, desenvolvedor de software e web com experiência em criar
+                        soluções modernas, interativas e responsivas. Com foco na experiência do usuário, meu objetivo é
+                        transformar ideias em projetos
+                        digitais que gerem resultados!
+                    </p>
+                    
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-icon">
+                                <i data-lucide="layout"></i>
+                            </div>
+                            <h3>Desenvolvimento Frontend</h3>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-icon">
+                                <i data-lucide="database"></i>
+                            </div>
+                            <h3>Desenvolvimento Backend</h3>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-icon">
+                                <i data-lucide="palette"></i>
+                            </div>
+                            <h3>UI/UX Design</h3>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-icon">
+                                <i data-lucide="workflow"></i>
+                            </div>
+                            <h3>Automações</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80"
+                        alt="Developer workspace">
+                </div>
+            </div>
+            <div class="skills-container">
+                <h3>Minhas Skills</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li><img src="./assets/skills/logo-html5.svg" alt=""></li>
+                        <li><img src="./assets/skills/logo-css3.svg" alt=""></li>
+                        <li><img src="./assets/skills/logo-javascript.svg" alt=""></li>
+                        <li><img src="./assets/skills/logo-react.svg" alt=""></li>
+                        <li><img src="./assets/skills/logo-nodejs.svg" alt=""></li>
+                        <li><img src="./assets/skills/logo-python.svg" alt=""></li>
+                        <li><img src="./assets/skills/logo-figma.svg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos em destaque</h2>
+                <p>Confira alguns dos meus últimos trabalhos</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web-development">Desenvolvimento Web</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="web-development">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2089&q=80"
+                        alt="E-commerce Platform">
+                    <div class="project-content">
+                        <h3>Plataforma E-commerce</h3>
+                        <p>Uma solução de comércio eletrônico completa com funcionalidade de carrinho e integração de
+                            pagamento.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i data-lucide="external-link"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web-design">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80"
+                        alt="Portfolio Website">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A modern portfolio website built with clean and elegant design.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i data-lucide="external-link"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em contato</h2>
+                <p>Vamos discutir seu projeto e criar algo incrível juntos</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="user_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="user_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">Enviar Mensagem</span>
+                            <span class="button-loader hidden">
+                                <i data-lucide="loader-2"></i>
+                                Enviando...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>patrickjorge.dev@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <h3>Whatsapp</h3>
+                            <p>(21) 9 7999-3614</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <h3>Localzação</h3>
+                            <p>Rio de Janeiro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i data-lucide="code-2"></i>
+                    <span>Patrick Jorge</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/PatrickJorge" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/patrick-corr%C3%AAa/" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Patrick Jorge. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="módulo" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
