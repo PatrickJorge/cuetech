@@ -1,5 +1,5 @@
 // Initialize EmailJS
-(function() {
+(function () {
     emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
 })();
 
@@ -30,7 +30,7 @@ filterButtons.forEach(button => {
         button.classList.add('active');
 
         const filter = button.getAttribute('data-filter');
-        
+
         projectCards.forEach(card => {
             if (filter === 'all' || card.getAttribute('data-category') === filter) {
                 card.style.display = 'block';
@@ -85,7 +85,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        
+
         if (targetElement) {
             // Close mobile menu if open
             mobileMenu.classList.remove('active');
@@ -117,4 +117,19 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(section => {
     section.classList.add('fade-out');
     observer.observe(section);
+});
+
+document.querySelectorAll('.nav-desktop a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            // Scroll to target
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });

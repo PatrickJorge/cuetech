@@ -89,6 +89,11 @@ body {
     display: none;
 }
 
+.cta-button a {
+    color: white;
+    text-decoration: none;
+}
+
 @media (min-width: 768px) {
     .cta-button {
         display: block;
@@ -141,7 +146,7 @@ body {
 .hero {
     padding-top: 8rem;
     padding-bottom: 6rem;
-    background: linear-gradient(to bottom right, #eef2ff, white, #f5f3ff);
+    background: linear-gradient(to bottom right, #eef2ff, white, #d6ddf1);
 }
 
 .hero-content {
@@ -278,58 +283,61 @@ body {
     justify-content: center;
     gap: 100px;
     list-style: none;
-  }
-  
-  .skills-grid ul li img {
+}
+
+.skills-grid ul li img {
     width: 54px;
-  }
-  
-  .skills-grid ul li img {
+}
+
+.skills-grid ul li img {
     filter: grayscale(100%);
-  }
-  
-  .skills-grid ul li img:hover {
+}
+
+.skills-grid ul li img:hover {
     cursor: pointer;
     scale: 1.1;
     transition: 0.5s;
-  }
-  
-  @media (min-width: 844px) {
+}
+
+@media (min-width: 844px) {
     .skills-container {
-      margin-top: 32px;
-      width: 100%;
+        margin-top: 32px;
+        width: 100%;
     }
-  }
-  
-  @media (min-width: 640px) {
+}
+
+@media (min-width: 640px) {
     .skills-grid ul li {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
     }
-  }
-  
-  @media (min-width: 844px) {
+}
+
+@media (min-width: 844px) {
     .skills-grid ul li img {
-      width: 24px;
+        width: 38px;
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .skills-grid ul {
-      flex-wrap: wrap;
-      justify-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
     .skills-grid ul li {
-      margin: 8px;
+        margin: 8px;
     }
+
     .skills-grid ul li img {
-      width: 42px;
+        width: 42px;
     }
+
     .skills-container {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
 
 .skills {
     display: grid;
@@ -481,6 +489,10 @@ body {
 .contact-grid {
     display: grid;
     gap: 2rem;
+}
+
+.contact-info{
+    margin-top: 30px;
 }
 
 @media (min-width: 1024px) {
