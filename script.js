@@ -24,9 +24,9 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class from all buttons
+        
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
+        
         button.classList.add('active');
 
         const filter = button.getAttribute('data-filter');
@@ -50,36 +50,33 @@ const buttonLoader = submitButton.querySelector('.button-loader');
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Show loading state
     submitButton.disabled = true;
     buttonText.classList.add('hidden');
     buttonLoader.classList.remove('hidden');
 
     try {
         await emailjs.sendForm(
-            'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-            'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+            'YOUR_SERVICE_ID', 
+            'YOUR_TEMPLATE_ID', 
             contactForm
         );
-
-        // Show success message
+        
         alert('Message sent successfully!');
         contactForm.reset();
     } catch (error) {
-        // Show error message
+       
         alert('Failed to send message. Please try again.');
     } finally {
-        // Reset button state
+        
         submitButton.disabled = false;
         buttonText.classList.remove('hidden');
         buttonLoader.classList.add('hidden');
     }
 });
 
-// Update copyright year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-// Smooth scroll for navigation links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -87,12 +84,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-            // Close mobile menu if open
+           
             mobileMenu.classList.remove('active');
             menuIcon.setAttribute('data-lucide', 'menu');
             lucide.createIcons();
 
-            // Scroll to target
             targetElement.scrollIntoView({
                 behavior: 'smooth'
             });
@@ -100,7 +96,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for scroll animations
+
 const observerOptions = {
     threshold: 0.2
 };
@@ -113,7 +109,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe sections
 document.querySelectorAll('section').forEach(section => {
     section.classList.add('fade-out');
     observer.observe(section);
@@ -126,10 +121,25 @@ document.querySelectorAll('.nav-desktop a').forEach(anchor => {
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-            // Scroll to target
+
             targetElement.scrollIntoView({
                 behavior: 'smooth'
             });
         }
+    });
+
+    // .mobile-menu
+    const menuLinks = document.querySelectorAll('.mobile-menu a');
+
+    menuLinks.forEach((link) => {
+
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const sectionId = link.getAttribute('href');
+            const section = document.querySelector(sectionId);
+
+            section.scrollIntoView({ behavior: 'smooth' });
+        });
     });
 });
