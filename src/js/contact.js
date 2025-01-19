@@ -121,6 +121,13 @@ export function initContactForm() {
         }
     });
 
+    // Fechar modal com tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
     // Tratamento de erros melhorado
     async function handleSubmit(e) {
         e.preventDefault();
@@ -152,6 +159,8 @@ export function initContactForm() {
             contactForm.querySelectorAll('.form-group').forEach(group => {
                 group.classList.remove('error', 'success');
             });
+
+            showModal();
 
         } catch (error) {
             console.error('Erro:', error);
