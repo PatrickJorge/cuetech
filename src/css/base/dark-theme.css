@@ -1,0 +1,31 @@
+/* Tema Escuro */
+[data-theme="dark"] {
+    /* Cores */
+    --primary-color: #FFC700;
+    --primary-hover: #ffd747;
+    --primary-light: #665200;
+    --primary-dark: #ffdb5c;
+
+    /* Backgrounds */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+
+    /* Textos */
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --text-tertiary: #cbd5e1;
+
+    /* Elementos específicos */
+    --header-bg: rgba(15, 23, 42, 0.9);
+    --mobile-menu-bg: #1e293b;
+    --button-text: #0f172a;
+    --form-bg: rgba(30, 41, 59, 0.95);
+    --form-border: rgba(255, 255, 255, 0.1);
+
+    /* Gradientes */
+    --hero-gradient: linear-gradient(to bottom right,
+            rgba(255, 199, 0, 0.05),
+            rgba(15, 23, 42, 0.95),
+            rgba(255, 199, 0, 0.02));
+}

@@ -1,0 +1,13 @@
+/* Estilos da seção Contato */
+.contact {
+    padding: 5rem 0;
+    background: var(--bg-primary);
+}
+
+.contact-form {
+    background: var(--form-bg);
+    border-color: var(--form-border);
+    padding: 2rem;
+}
+
+/* ... outros estilos de contato ... */ 

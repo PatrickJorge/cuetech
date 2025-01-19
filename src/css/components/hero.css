@@ -1,0 +1,13 @@
+/* Estilos da seção Hero */
+.hero {
+    height: 100vh;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    background: var(--hero-gradient);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* ... outros estilos do hero ... */ 

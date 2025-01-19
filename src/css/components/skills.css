@@ -1,0 +1,13 @@
+/* Estilos da seção Skills */
+.skills-section {
+    padding: 5rem 0;
+    background: var(--bg-primary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+}
+
+/* ... outros estilos de skills ... */ 

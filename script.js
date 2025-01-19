@@ -24,9 +24,9 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        
+
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        
+
         button.classList.add('active');
 
         const filter = button.getAttribute('data-filter');
@@ -56,18 +56,18 @@ contactForm.addEventListener('submit', async (e) => {
 
     try {
         await emailjs.sendForm(
-            'YOUR_SERVICE_ID', 
-            'YOUR_TEMPLATE_ID', 
+            'YOUR_SERVICE_ID',
+            'YOUR_TEMPLATE_ID',
             contactForm
         );
-        
+
         alert('Message sent successfully!');
         contactForm.reset();
     } catch (error) {
-       
+
         alert('Failed to send message. Please try again.');
     } finally {
-        
+
         submitButton.disabled = false;
         buttonText.classList.remove('hidden');
         buttonLoader.classList.add('hidden');
@@ -84,7 +84,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-           
+
             mobileMenu.classList.remove('active');
             menuIcon.setAttribute('data-lucide', 'menu');
             lucide.createIcons();
@@ -142,4 +142,82 @@ document.querySelectorAll('.nav-desktop a').forEach(anchor => {
             section.scrollIntoView({ behavior: 'smooth' });
         });
     });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const skills = document.querySelectorAll('.skill');
+    const skillDetails = document.querySelectorAll('.skill-detail');
+
+    // Mostrar o primeiro skill por padrão
+    skills[0].classList.add('active');
+    skillDetails[0].classList.add('active');
+
+    skills.forEach(skill => {
+        skill.addEventListener('click', () => {
+            // Remove active class de todos
+            skills.forEach(s => s.classList.remove('active'));
+            skillDetails.forEach(d => d.classList.remove('active'));
+
+            // Adiciona active class ao item clicado
+            skill.classList.add('active');
+            const skillType = skill.getAttribute('data-skill');
+            document.querySelector(`[data-detail="${skillType}"]`).classList.add('active');
+        });
+    });
+});
+
+// Gerenciamento do tema
+function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    updateThemeIcon();
+}
+
+function updateThemeIcon() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.querySelector('.theme-light').style.display = isDark ? 'none' : 'block';
+    document.querySelector('.theme-dark').style.display = isDark ? 'block' : 'none';
+}
+
+// Inicialização do tema
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(savedTheme);
+    updateThemeIcon();
+
+    // Event listener para o botão de tema
+    document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+});
+
+// Função para verificar elementos visíveis e adicionar animações
+function handleScrollAnimations() {
+    const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target); // Para a animação acontecer apenas uma vez
+            }
+        });
+    }, {
+        threshold: 0.1, // Elemento será animado quando 10% dele estiver visível
+        rootMargin: '0px' // Margem adicional para trigger da animação
+    });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Inicialize as animações quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', () => {
+    handleScrollAnimations();
 });
