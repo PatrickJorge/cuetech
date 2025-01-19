@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CueTech</title>
+    <title>CueTech - Desenvolvimento Web Moderno</title>
+
+    <!-- Meta tags SEO -->
+    <meta name="description"
+        content="CueTech - Desenvolvimento de aplicações web modernas e elegantes. Transformando ideias em experiências digitais únicas.">
+    <meta name="keywords" content="desenvolvimento web, aplicativos, frontend, backend, react, javascript">
+    <meta name="author" content="CueTech">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CueTech - Desenvolvimento Web">
+    <meta property="og:description" content="Transformando ideias em experiências digitais">
+    <meta property="og:type" content="website">
+
+    <!-- Links -->
+    <link rel="canonical" href="https://cuetech.com.br">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/lucide-icons/dist/umd/lucide-icons.min.css">
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -66,8 +81,8 @@
                     <a href="cuetechdevelopment@gmail.com" aria-label="mail">
                         <i data-lucide="mail"></i>
                     </a>
-                    <a href="https://wa.me/+5521979993614" target="_blank">
-                        <img class="whatsapp-icon" src="./assets/projects-image/whatsapp.png" alt="WhatsApp">
+                    <a href="https://wa.me/+5521979993614" target="_blank" aria-label="WhatsApp">
+                        <i data-lucide="message-circle"></i>
                     </a>
                 </div>
             </div>
@@ -332,9 +347,18 @@
                             <h3 class="project-title">Restaurante Sabor & Arte</h3>
                         </div>
                         <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag" title="React">
+                                <i class="devicon-react-original"></i>
+                            </span>
+                            <span class="project-tag" title="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span class="project-tag" title="HTML5">
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span class="project-tag" title="CSS3">
+                                <i class="devicon-css3-plain"></i>
+                            </span>
                         </div>
                         <p class="project-description">
                             Projeto de apresentação de produto e design de marca desenvolvido para um restaurante.
@@ -361,9 +385,18 @@
                             <h3 class="project-title">Portfolio Website</h3>
                         </div>
                         <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag" title="React">
+                                <i class="devicon-react-original"></i>
+                            </span>
+                            <span class="project-tag" title="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span class="project-tag" title="HTML5">
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span class="project-tag" title="CSS3">
+                                <i class="devicon-css3-plain"></i>
+                            </span>
                         </div>
                         <p class="project-description">
                             A modern portfolio website built with clean and elegant design.
@@ -443,19 +476,78 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i data-lucide="code-2" class="logo-icon"></i>
-                    <span>CueTech</span>
+            <div class="footer-grid">
+                <!-- Coluna 1: Logo e Sobre -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i data-lucide="code-2" class="logo-icon"></i>
+                        <span>CueTech</span>
+                    </div>
+                    <p class="footer-about">
+                        Transformando ideias em experiências digitais únicas.
+                        Desenvolvimento web moderno e soluções personalizadas.
+                    </p>
                 </div>
-                <div class="footer-social">
-                    <a href="cuetechdevelopment@gmail.com" aria-label="mail"><i data-lucide="mail"></i></a>
-                    <a href="https://wa.me/+5521979993614" target="_blank"><img class="whatsapp-icon"
-                            src="./assets/projects-image/whatsapp.png" alt=""></a>
+
+                <!-- Coluna 2: Links Rápidos -->
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <nav class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#about">Sobre</a>
+                        <a href="#projects">Projetos</a>
+                        <a href="#contact">Contato</a>
+                    </nav>
+                </div>
+
+                <!-- Coluna 3: Contato -->
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <div class="footer-contact">
+                        <a href="mailto:cuetechdevelopment@gmail.com" class="footer-contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>cuetechdevelopment@gmail.com</span>
+                        </a>
+                        <a href="https://wa.me/+5521979993614" class="footer-contact-item" target="_blank">
+                            <i data-lucide="phone"></i>
+                            <span>(21) 9 7999-3614</span>
+                        </a>
+                        <div class="footer-contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Rio de Janeiro, RJ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 4: Redes Sociais -->
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/seu-perfil" target="_blank" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="mailto:cuetechdevelopment@gmail.com" aria-label="Email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="https://wa.me/+5521979993614" target="_blank" aria-label="WhatsApp">
+                            <i data-lucide="message-circle"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Linha divisória -->
+            <div class="footer-divider"></div>
+
+            <!-- Copyright -->
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> CueTech. Todos os direitos reservados.</p>
+                <div class="footer-theme-toggle">
+                    <button class="theme-toggle" aria-label="Alternar tema">
+                        <i data-lucide="sun" class="theme-light"></i>
+                        <i data-lucide="moon" class="theme-dark"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>
