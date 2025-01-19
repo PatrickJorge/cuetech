@@ -120,9 +120,17 @@
     transition: all 0.3s ease;
 }
 
+/* Hover padrão (modo claro) */
 .footer-social a:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+/* Hover específico para modo noturno */
+[data-theme="dark"] .footer-social a:hover {
     background: var(--primary-color);
-    color: var(--text-on-light);
+    color: var(--bg-primary);
     transform: translateY(-3px);
 }
 

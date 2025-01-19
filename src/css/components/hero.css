@@ -78,9 +78,33 @@
 /* Social links */
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Hover padrão (modo claro) */
+.social-links a:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+/* Hover específico para modo noturno */
+[data-theme="dark"] .social-links a:hover {
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    transform: translateY(-3px);
 }
 
 /* Responsividade */
