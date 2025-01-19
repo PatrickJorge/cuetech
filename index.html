@@ -390,24 +390,24 @@
 
             <div class="contact-grid">
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" class="contact-form">
                         <div class="form-group">
                             <label for="name">Nome</label>
-                            <input type="text" id="name" name="user_name" placeholder="Nome" required>
+                            <input type="text" id="name" name="user_name" required placeholder="Seu nome">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="user_email" placeholder="Email" required>
+                            <input type="email" id="email" name="user_email" required placeholder="seu@email.com">
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Mensagem" required></textarea>
+                            <textarea id="message" name="message" required placeholder="Sua mensagem"
+                                rows="5"></textarea>
                         </div>
                         <button type="submit" class="submit-button">
                             <span class="button-text">Enviar Mensagem</span>
                             <span class="button-loader hidden">
-                                <i data-lucide="loader-2"></i>
-                                Enviando...
+                                <i data-lucide="loader-2" class="animate-spin"></i>
                             </span>
                         </button>
                     </form>
@@ -461,7 +461,7 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="module" src="src/js/main.js"></script>
 </body>
 
