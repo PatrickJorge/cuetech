@@ -17,4 +17,18 @@
     justify-content: space-between;
 }
 
-/* ... outros estilos do header ... */ 
+/* Ajustes de tipografia no header */
+.logo {
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
+    font-size: var(--text-xl);
+    letter-spacing: var(--tracking-tight);
+}
+
+.nav-desktop a {
+    font-weight: var(--font-medium);
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wide);
+}
+
+/* ... outros estilos do header ... */

@@ -28,4 +28,147 @@
             rgba(255, 199, 0, 0.05),
             rgba(15, 23, 42, 0.95),
             rgba(255, 199, 0, 0.02));
+
+    /* Cores de texto para áreas claras */
+    --text-on-light: #0f172a;
+    /* Texto escuro para fundos claros */
+    --text-on-light-secondary: #1e293b;
+    /* Texto secundário para fundos claros */
+
+    /* Cores específicas para skills */
+    --skill-text: #0f172a;
+    /* Texto preto para skills não selecionadas */
+    --skill-text-secondary: #1e293b;
+    /* Texto secundário para skills não selecionadas */
+    --skill-text-active: #ffffff;
+    /* Texto branco para skill ativa */
+    --skill-text-active-secondary: rgba(255, 255, 255, 0.9);
+    /* Texto secundário para skill ativa */
+}
+
+/* Ajustes para as skills no modo escuro */
+[data-theme="dark"] .skill {
+    color: var(--skill-text);
+}
+
+[data-theme="dark"] .skill h3 {
+    color: var(--skill-text);
+}
+
+[data-theme="dark"] .skill p,
+[data-theme="dark"] .skill-preview {
+    color: var(--skill-text-secondary);
+}
+
+/* Quando a skill está ativa */
+[data-theme="dark"] .skill.active {
+    background: var(--gradient);
+}
+
+[data-theme="dark"] .skill.active h3 {
+    color: var(--skill-text-active);
+}
+
+[data-theme="dark"] .skill.active p,
+[data-theme="dark"] .skill.active .skill-preview {
+    color: var(--skill-text-active-secondary);
+}
+
+/* Ajuste do ícone da skill */
+[data-theme="dark"] .skill-icon {
+    background: var(--gradient);
+    color: var(--skill-text-active);
+}
+
+[data-theme="dark"] .skill.active .skill-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--skill-text-active);
+}
+
+/* Ajustes para os detalhes das skills */
+[data-theme="dark"] .skill-detail {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .skill-detail h4 {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .skill-detail p,
+[data-theme="dark"] .skill-detail li {
+    color: var(--text-primary);
+}
+
+/* Ajustes de texto para elementos com fundo claro no modo escuro */
+[data-theme="dark"] .skill.active {
+    color: var(--text-on-light);
+}
+
+[data-theme="dark"] .skill.active p {
+    color: var(--text-on-light-secondary);
+}
+
+[data-theme="dark"] .primary-button,
+[data-theme="dark"] .submit-button {
+    color: var(--text-on-light);
+}
+
+[data-theme="dark"] .filter-btn.active {
+    color: var(--text-on-light);
+}
+
+/* Ajuste para cards e elementos com background claro */
+[data-theme="dark"] .project-card {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .project-content h3,
+[data-theme="dark"] .project-content p {
+    color: var(--text-primary);
+}
+
+/* Ajustes para elementos de formulário */
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-group label {
+    color: var(--text-primary);
+}
+
+/* Ajustes para botões e elementos interativos */
+[data-theme="dark"] .cta-button,
+[data-theme="dark"] .submit-button {
+    background: var(--gradient);
+    color: var(--text-on-light);
+}
+
+/* Ajustes para elementos de destaque */
+[data-theme="dark"] .highlight {
+    color: var(--primary-color);
+}
+
+/* Ajustes para tooltips ou elementos flutuantes */
+[data-theme="dark"] .tooltip,
+[data-theme="dark"] .dropdown-menu {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Ajustes para badges e tags */
+[data-theme="dark"] .badge,
+[data-theme="dark"] .tag {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Ajustes para elementos de navegação */
+[data-theme="dark"] .mobile-menu {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .mobile-menu a {
+    color: var(--text-primary);
 }

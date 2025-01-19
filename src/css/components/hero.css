@@ -4,10 +4,103 @@
     padding-top: 8rem;
     padding-bottom: 6rem;
     background: var(--hero-gradient);
+    text-align: center;
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* ... outros estilos do hero ... */ 
+/* Logo Hero */
+.hero-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-logo-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--primary-color);
+}
+
+/* Ajustes de tipografia no hero */
+.hero h1 {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-bold);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero .highlight {
+    display: block;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-medium);
+    letter-spacing: var(--tracking-normal);
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    transition: border-right 0.3s ease;
+}
+
+/* Animação de digitação */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid var(--primary-color);
+    white-space: nowrap;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary-color)
+    }
+}
+
+.hero p {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+    margin: 1.5rem auto;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .hero h1 {
+        font-size: var(--text-4xl);
+    }
+
+    .hero .highlight {
+        font-size: var(--text-xl);
+    }
+
+    .hero-logo-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* ... outros estilos do hero ... */
