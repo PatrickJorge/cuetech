@@ -1,6 +1,7 @@
 // Gerenciamento do formulário de contato
 export function initContactForm() {
     const contactForm = document.getElementById('contactForm');
+    const modal = document.getElementById('successModal');
     if (!contactForm) return;
 
     // Substitua XXXX pelos seus IDs copiados do EmailJS
@@ -15,6 +16,27 @@ export function initContactForm() {
     const buttonText = submitButton.querySelector('.button-text');
     const buttonLoader = submitButton.querySelector('.button-loader');
 
+    // Função para mostrar o modal
+    function showModal() {
+        modal.classList.add('active');
+        lucide.createIcons(); // Recria os ícones do Lucide
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        modal.classList.remove('active');
+    }
+
+    // Event listener para o botão de fechar
+    modal.querySelector('.modal-close').addEventListener('click', closeModal);
+
+    // Fechar modal ao clicar fora
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -26,8 +48,8 @@ export function initContactForm() {
         try {
             // Envia o email
             await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, contactForm);
-            alert('Mensagem enviada com sucesso!');
             contactForm.reset();
+            showModal();
         } catch (error) {
             console.error('Erro:', error);
             alert('Erro ao enviar mensagem. Tente novamente.');
